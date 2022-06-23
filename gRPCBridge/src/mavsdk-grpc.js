@@ -33,6 +33,35 @@ class MAVSDKDrone {
         });
     }
 
+    Disarm()
+    {
+        this.ActionClient.disarm({}, function(err, actionResponse){
+            if(err){
+                console.log("Unable to disarm drone: ", err);
+                return;
+            }
+        });
+    }
+
+    Takeoff()
+    {
+        this.ActionClient.takeoff({}, function(err, actionResponse){
+            if(err){
+                console.log("Unable to disarm drone: ", err);
+                return;
+            }
+        });
+    }
+
+    Land()
+    {
+        this.ActionClient.land({}, function(err, actionResponse){
+            if(err){
+                console.log("Unable to land drone: ", err);
+                return;
+            }
+        });
+    }
 }
 
 module.exports = MAVSDKDrone;
