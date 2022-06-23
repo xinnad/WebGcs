@@ -2,7 +2,7 @@ const grpc = require('@grpc/grpc-js');
 const protoLoader = require('@grpc/proto-loader');
 
 
-const MAVSDK_ACTION_PROTO_PATH = __dirname + '/MAVSDK-Proto/protos/action/action.proto';
+const MAVSDK_ACTION_PROTO_PATH = __dirname + '/../MAVSDK-Proto/protos/action/action.proto';
 console.log(MAVSDK_ACTION_PROTO_PATH);
 const ACTION_PACKAGE_DEFINITION = protoLoader.loadSync(
     MAVSDK_ACTION_PROTO_PATH,

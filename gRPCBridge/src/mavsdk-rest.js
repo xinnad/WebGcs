@@ -18,19 +18,17 @@ app.use(cors(
 const http = require('http');
 const server = http.createServer(app);
 
+var MAVSDKDrone = require('./mavsdk-grpc.js')
+var drone = new MAVSDKDrone()
 
 app.get('/arm', function(req, res){
 
     console.log("Hellooo from arm!")
+    
+    drone.Arm()
 
     res.sendStatus(200);
 
-});
-
-app.get('/gps', function(req, res){
-
-    console.log("Hellooo from gps!")
-    res.send(drone.position)
 });
 
 server.listen(8081, function () {
