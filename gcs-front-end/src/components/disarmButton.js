@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
+
 import styled from 'styled-components';
 
 const Button = styled.button`
-  color: darkred;
+  color: blue;
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
@@ -9,8 +11,8 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-function ArmDrone() {
-    fetch('http://localhost:8081/arm', {
+function DisarmDrone() {
+    fetch('http://localhost:8081/disarm', {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -20,14 +22,14 @@ function ArmDrone() {
 }
 
 
-function ArmButton() {
+function DisarmButton() {    
 
     return (
         <div>
             <Button
-                onClick={() => ArmDrone()}>Arm Drone</Button>
+                onClick={() => DisarmDrone()}>Disarm Drone</Button>
         </div>
     )
 }
 
-export default ArmButton
+export default DisarmButton
