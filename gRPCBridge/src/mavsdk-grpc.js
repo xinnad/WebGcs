@@ -89,7 +89,6 @@ class MAVSDKDrone {
         this.GpsCall = this.TelemetryClient.subscribePosition({});
 
         this.GpsCall.on('data', function(gpsInfoResponse){
-            console.log(gpsInfoResponse)
             self.position = gpsInfoResponse.position
             return; 
         });

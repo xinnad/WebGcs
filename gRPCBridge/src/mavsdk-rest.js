@@ -61,6 +61,13 @@ app.get('/land', function(req, res){
 
 });
 
+
+app.get('/gps', function(req, res){
+
+    console.log("Hellooo from gps!")
+    res.send(drone.position)
+});
+
 server.listen(8081, function () {
     var host = server.address().address
     var port = server.address().port
