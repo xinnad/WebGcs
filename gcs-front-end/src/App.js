@@ -3,6 +3,7 @@ import ArmButton from './components/armButton';
 import DisarmButton from './components/disarmButton';
 import TakeoffButton from './components/takeoffButton';
 import LandButton from './components/landButton';
+import GpsCoords from './components/gpsCoords';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <DisarmButton/>
       <TakeoffButton/>
       <LandButton/>
+      <GpsCoords/>
     </div>
   );
 }
